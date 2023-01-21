@@ -1,5 +1,8 @@
+"use client"
+
 // Import module
 import Image from 'next/image';
+import { useState } from 'react';
 
 // Import media
 import profile from '../../public/profile.jpg';
@@ -13,9 +16,37 @@ export default function Home() {
 
       <Header />
       <Hero />
+      <App />
 
     </div>
   )
+}
+
+// Checkbox class
+function Checkbox(props) {
+  return (
+    <label>
+      <input type='checkbox' checked={props.checked} onChange={props.onChange} style={props.style} id={props.id} className='checkbox' />
+      {props.label}
+    </label>
+  );
+}
+
+// Dropdown class
+function Select(props) {
+  const [list, setItems] = useState(props.items)
+
+  return (
+
+    <select className='select' id={props.id} style={props.style} onChange={props.onChange} defaultValue={props.selected}>
+    
+      <option value="" disabled >{props.placeholder}</option>
+      {
+        list.map((object, i) => <option value={object} key={i}> {object} </option>)
+      }
+    </select>
+
+  );
 }
 
 // Link
@@ -87,10 +118,54 @@ function Hero(){
                 />
               </OpenLink>
 
+              <OpenLink href='https://github.com/ramiqcom'>
+                <img src='https://allvectorlogo.com/img/2021/12/github-logo-vector.png' 
+                  style={{height: '10vh'}} 
+                  alt='GitHub'
+                />
+              </OpenLink>
+             
             </div>      
         </div>
 
       </div>
+    </div>
+  )
+}
+
+// App section
+function App(){
+  return (
+    <div style={{ padding: '1% 3%' }}>
+      
+      <div style={{ fontSize: '40px', fontWeight: 'bold' }}>
+        Check my app!
+      </div>
+
+      <div style={{ margin: '2% auto', width: '100%', display: 'flex'}}>
+
+        <OpenLink href='https://rsqa.ramiqcom.xyz/'>
+          <button className='button'>Remote Sensing Quick Analysis <br /> (Earth Engine)</button>
+        </OpenLink>
+
+        <OpenLink href='https://rsqa-next.vercel.app/'>
+          <button className='button'>Remote Sensing Quick Analysis <br /> (Next JS)</button>
+        </OpenLink>
+
+        <OpenLink href='https://webgis-payung.vercel.app/'>
+          <button className='button'>WebGIS Desa Payung</button>
+        </OpenLink>
+
+        <OpenLink href='https://next-carbon.vercel.app/'>
+          <button className='button'>Fairatmos &apos; Carbon Calculator <br /> (JARVIS)</button>
+        </OpenLink>
+        
+        <OpenLink href='https://flood.ramiqcom.xyz/'>
+          <button className='button'>Multi Temporal Flood Risk Prediction <br/></button>
+        </OpenLink>
+
+      </div>
+      
     </div>
   )
 }
