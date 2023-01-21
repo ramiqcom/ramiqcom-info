@@ -157,7 +157,7 @@ function App(){
         </OpenLink>
 
         <OpenLink href='https://next-carbon.vercel.app/'>
-          <button className='button'>Fairatmos &apos; Carbon Calculator <br /> (JARVIS)</button>
+          <button className='button'>Fairatmos&apos; Carbon Calculator <br /> (JARVIS)</button>
         </OpenLink>
         
         <OpenLink href='https://flood.ramiqcom.xyz/'>
