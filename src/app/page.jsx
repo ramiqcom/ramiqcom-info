@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div style={{ width: '100%', position: 'relative', height: '98vh' }}>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true} />
 
       <Header />
       <Hero />
@@ -151,7 +151,7 @@ function App(){
           <button className='button'>Remote Sensing Quick Analysis <br /> (Earth Engine)</button>
         </OpenLink>
 
-        <OpenLink href='https://rsqa-next.vercel.app/'>
+        <OpenLink href='https://rsqa.vercel.app/'>
           <button className='button'>Remote Sensing Quick Analysis <br /> (Next JS)</button>
         </OpenLink>
 
