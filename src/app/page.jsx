@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div style={{ width: '100%', position: 'relative', height: '98vh' }}>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true} />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
 
       <Header />
       <Hero />
@@ -21,33 +21,6 @@ export default function Home() {
 
     </div>
   )
-}
-
-// Checkbox class
-function Checkbox(props) {
-  return (
-    <label>
-      <input type='checkbox' checked={props.checked} onChange={props.onChange} style={props.style} id={props.id} className='checkbox' />
-      {props.label}
-    </label>
-  );
-}
-
-// Dropdown class
-function Select(props) {
-  const [list, setItems] = useState(props.items)
-
-  return (
-
-    <select className='select' id={props.id} style={props.style} onChange={props.onChange} defaultValue={props.selected}>
-    
-      <option value="" disabled >{props.placeholder}</option>
-      {
-        list.map((object, i) => <option value={object} key={i}> {object} </option>)
-      }
-    </select>
-
-  );
 }
 
 // Link
@@ -151,7 +124,7 @@ function App(){
           <button className='button'>Remote Sensing Quick Analysis <br /> (Earth Engine)</button>
         </OpenLink>
 
-        <OpenLink href='https://rsqa.vercel.app/'>
+        <OpenLink href='https://rsqa.ramiqcom.live/'>
           <button className='button'>Remote Sensing Quick Analysis <br /> (Next JS)</button>
         </OpenLink>
 
@@ -161,6 +134,10 @@ function App(){
 
         <OpenLink href='https://next-carbon.vercel.app/'>
           <button className='button'>Fairatmos&apos; Carbon Calculator <br /> (JARVIS)</button>
+        </OpenLink>
+
+        <OpenLink href='https://peatpalm.vercel.app/'>
+          <button className='button'>Peatland vs Palm Oil</button>
         </OpenLink>
         
         <OpenLink href='https://flood.ramiqcom.xyz/'>
